@@ -1,0 +1,911 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+    color: white;
+    background-color: rgb(34, 33, 33);
+}
+
+html{   
+  scroll-behavior: smooth;
+}
+
+/* navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 87%;
+    padding: 20px 0px;
+    margin: auto;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    transition: 0.5s;
+}
+
+nav ul li a:hover {
+    color: #c28400;
+}
+
+.logo {
+    font-family: 'Roboto';
+    font-size: 20pt;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo a span{
+    text-decoration: none;
+    color: #c28400;
+}
+
+/* hero */
+
+.hero {
+    display: flex;
+    color: white;
+    margin: 20vh 20vh 10vh 20vh;
+    justify-content: space-between;
+}
+
+.header{
+    flex-basis: 50%;
+}
+
+.header-name {
+    color: #c28400;
+    font-size: 14pt;
+}
+
+.bolder-hn {
+    color: #c28400;
+    font-weight: bold;
+}
+
+.header-job {
+    font-size: 40pt;
+    color: white;
+}
+
+.header-description {
+    text-align: justify;
+    font-size: 10pt;
+    color: rgb(146, 146, 146);
+}
+
+.header-btn {
+    cursor: pointer;
+    font-size: 14pt;
+    margin: 2vh 0;
+    color: white;
+    padding: 1vh 2vh;
+    border-radius: 3vh;
+    border-color: #ffae00;
+    transition: 0.5s;
+}
+
+.header-btn:hover {
+    background-color: rgb(255, 136, 0);
+}
+
+.image-1 {
+    margin-top: -5vh;
+    width: 50vh;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% !important;
+}
+
+/* end of hero */
+
+/* about */
+.about {
+    padding: 0 20vh;
+    position: relative;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col1 {
+    flex-basis: 35%;
+}
+
+.about-col2 {
+    flex-basis: 60%;
+}
+
+.title-about {
+    margin-top: 5vh;
+    color: #c28400;
+}
+
+.subtitle-about {
+    font-size: 10pt;
+    color: rgb(146, 146, 146);
+    margin-right: 5vh;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #c28400;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents {
+    font-size: 10pt;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #ffae00;
+    font-weight: bold;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* end of about */
+
+/* porto */
+
+.portofolio {
+    margin: 20vh 20vh 0vh 20vh;
+}
+
+.title-porto {
+    color: #c28400;
+}
+
+.porto-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.porto-item {
+    display: flex;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 300;
+    border-right: 10px;
+    justify-self: center;
+}
+
+.overlay {
+    position: relative;
+}
+
+.overlay-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay-bottom{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #9c6b01;
+}
+
+.overlay:hover .overlay-bottom{
+    opacity: 90%;
+}
+
+.overlay-text{
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+/* end of porto */
+
+/* services */
+.services {
+    margin: 10vh 20vh;
+}
+
+.title-services {
+    color: #c28400;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div {
+    background-color: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-right: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div h2 {
+    background-color: transparent;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.icon-services {
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+.services-list div p {
+    background-color: transparent;
+}
+
+.services-list div a {
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.services-list div:hover {
+    background: #c28400;
+    transform: translateY(-10px);
+}
+
+/* end of services */
+
+/* contact */
+.contact {
+    margin: 10vh 20vh;
+}
+
+.contact-title {
+    color: #c28400;
+}
+
+.contact-1 {
+    flex-basis: 35%;
+}
+
+.contact-2 {
+    flex-basis: 60%;
+}
+
+.contact-1 p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #c28400;
+    transform: translateY(-5px);
+}
+
+.contact-2 form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    background: #262626;
+    padding: 15px;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+
+.button-contact {
+    cursor: pointer;
+    margin: 2vh 2vh 2vh 0;
+    background-color: #c28400;
+    border: none;
+    border-radius: 5px;
+    font-size: 12pt;
+    padding: 0.5vh 2vh;
+}
+
+.copyright {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 10pt;
+    display: flex;
+    justify-content: center;
+}
+
+.copyright p {
+    background-color: transparent;
+    color: #ababab;
+}
+
+/* end of contact */
+
+/* porto-detail */
+.porto-detail{
+    margin: 5vh 14vh;
+    font-size: 20pt;
+}
+
+.detail-title{
+    margin: 0 18vh 3vh 18vh;
+    color: #c28400;
+    font-weight: bold;
+    display: block;
+}
+
+.detail-image{
+    display: flex;
+    justify-content: center;
+}
+
+.detail-image img{
+    width: 80%;
+}
+
+.detail-desc{
+    font-size: 10pt;
+    text-align: justify;
+    margin: 2vh 18vh;
+    font-weight: 500;
+}
+
+.detail-icons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icons-link p{
+    color: #c28400;
+    font-size: 10pt;
+}
+
+/* end of porto-detail */
+
+/* services-detail */
+/* web dev */
+.web-detail{
+    margin: 20vh 14vh;
+}
+
+.why-me-web{
+    display: block;
+    text-align: center;
+}
+
+.why-me-web h1{
+    color: #c28400;
+}
+
+.why-me-web p{
+    color: #ababab;
+}
+
+.why-me-web-list{
+    display: grid;
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+
+.why-me-web-item{
+    display: block;
+    text-align: center;
+}
+
+.why-me-web-item h3{
+    margin-top: 0.5vh;
+}
+
+.why-me-web-item p{
+    color: #ababab;
+
+}
+
+.package{
+    margin: 20vh 20vh;
+    text-align: center;
+}
+
+.package h1{
+    color: #c28400;
+}
+
+.package h1{
+    margin: 2vh;
+}
+
+.package p{
+    color: #ababab;
+}
+
+.source-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-gap: 40px;
+    margin-top: 10px;
+}
+
+.source-item{
+    background-color: #262626;
+    padding: 20px;
+}
+
+.source-item h2{
+    background-color: transparent;
+    margin: 2vh;
+}
+
+.source-item p{
+    color: #ababab;
+    background-color: transparent;
+    margin: 2vh;
+}
+
+.source-item a{
+    text-decoration: none;
+}
+
+.source-item a button{
+    padding: 1vh 10vh;
+    border-radius: 10pt;
+    background-color: #c28400;
+    border: none;
+    cursor: pointer;
+}
+
+.desc-source{
+    font-size: 10pt;
+    padding: 10pt;
+}
+
+.process-web{
+    margin: 20vh 10vh;
+}
+
+.process-web h1{
+    text-align: center;
+    color: #c28400;
+}
+
+.web-title-process{
+    display: flex;
+    cursor: pointer;
+}
+
+.web-item-process{
+    padding: 3vh 8vh;
+    background-color: #262626;
+    color: #696969;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.web-item-process:hover{
+    background-color: #c28400;
+}
+
+.active-process{
+    background-color: #c28400;
+    color: white;
+}
+
+.logo-process{
+    background-color: transparent;
+}
+
+.web-process-detail{
+    padding: 2vh 5vh;
+    background-color: #262626;
+    display: none;
+}
+
+.web-process-detail .header-web-process-detail{
+    color: white;
+    font-size: 26px;
+}
+
+.web-process-detail p{
+    background-color: transparent;
+    color: #ababab;
+}
+
+.active-process-detail{
+    display: block;;
+}
+
+/* end of web dev */
+/* end of services-detail */
+
+
+
+/* media */
+@media only screen and (max-width: 600px) {
+    /* navbar */
+    nav{
+        display: block;
+    }
+
+    /* hero */
+    .hero{
+        margin: 10% 5%;
+        display: block;
+    }
+
+    .header{
+        flex-basis: 100%;
+    }
+
+    .footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-name{
+        font-size: 16px;
+    }
+
+    .header-job{
+        font-size: 26px;
+    }
+
+    .header-description{
+        font-size: 12px;
+    }
+
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: centerW;
+    }
+
+    .header-btn{
+        font-size: 14px;
+    }
+
+    .image-1{
+        margin-top: 5%;
+        width: 50%;
+    }
+    /* end of hero */
+    
+    /* about */
+    .about{
+        display: block;
+        padding: 2% 0 0 8%;
+        margin: 0% 0 20% 0;
+    }
+
+    .about-col1 img{
+        display: none;
+        width: 100%;
+    }
+
+    .subtitle-about{
+        text-align: justify;
+        font-size: 12px;
+    }
+
+    .title-about{
+        font-size: 32px;
+    }
+
+    .tab-links.active-link::after {
+        width: 10%;
+    }    
+
+    .tab-titles{
+        display: block;  
+        margin-bottom: 5%;  
+    }
+
+    .tab-links{
+        margin-bottom: 2%;
+        font-size: 14px;
+    }
+
+    .tab-contents{
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+    }
+    /* end of about */
+
+    /* portofolio */
+    .portofolio{
+        padding-top: 10%;
+        margin:-10% 2% auto 2%;
+    }
+
+    .title-porto{
+        font-size: 32px;
+    }
+
+    .porto-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .porto-list .porto-item .overlay img{
+        width: 100%;
+    }
+
+    .porto-item {
+        display: flex;
+        background-color: transparent;
+        padding: 10px;
+        font-size: 13px;
+        font-weight: 300;
+        border-right: 10px;
+        justify-self: center;
+    }
+    
+    .overlay {
+        position: relative;
+    }
+    
+    .overlay-image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .overlay-bottom{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #9c6b01;
+    }
+    
+    .overlay .overlay-bottom{
+        opacity: 80%;
+    }
+    
+    .overlay-text{
+        background-color: transparent;
+        color: white;
+        font-size: 12px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+
+    /* services */
+    .services{
+        display: block;
+        margin: 10% 5% 20% 5%;
+        padding-top: 10%;
+    }
+
+    .services-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-gap: 5px;
+        margin-top: 20px;
+    }
+
+    .services-list div {
+        background-color: #262626;
+        padding: 20px;
+        font-size: 12px;
+        font-weight: 300;
+        border-right: 10px;
+        transition: background 0.5s, transform 0.5s;
+    }
+    
+    .title-services{
+        font-size: 32px;
+    }
+
+    .services-list div h2 {
+        background-color: transparent;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 7.5px;
+    }
+    
+    .icon-services {
+        background-color: transparent;
+        width: 35px;
+        height: 35px;
+        margin-bottom: 15px;
+    }
+    
+    .services-list div p {
+        background-color: transparent;
+        text-align: justify;
+        font-size: 10px;
+        display: none;
+    }
+    
+    .services-list div a {
+        background-color: transparent;
+        color: #fff;
+        font-size: 12px;
+        text-decoration: none;
+        margin-top: 20px;
+        display: inline-block;
+    }
+
+    /* end of services */
+
+    /* contact */
+    .contact{
+        padding-top: 5%;
+        margin: 20% 5%;
+    }
+
+    .row{
+        display: block;
+    }
+
+    .contact-title{
+        font-size: 32px;
+    }
+
+    .social-icons{
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-1 p{
+        font-size: 12px;
+    }
+
+    form input, form textarea{
+        font-size: 12px;
+    }
+    /* end of contact */
+
+    /* detail porto */
+    .porto-detail{
+        margin: 0px 20px 0px 20px;
+        padding: 0;
+    }
+
+    .detail-title{
+        margin: 0;
+        display: block;
+        font-size: 24px;
+    }
+
+    .icons-link p{
+        font-size: 14px;
+    }
+
+    .icons-link a i{
+        width: 10px;
+        height: 10px;
+    }
+
+    .detail-image{
+        width: 100%;
+    }
+
+    .detail-desc{
+        margin: 5px;
+        font-size: 12px;
+    }
+    /* end of detail porto */
+
+    /* webdev */
+    .web-detail{
+        margin: 10vh 2vh;
+    }
+
+    .process-web{
+        margin: 10vh 2vh;
+    }
+
+    .web-title-process{
+        display: block;
+        font-size: 16px;
+    }
+
+    .web-process-detail{
+        font-size: 12px;
+    }
+
+    .header-web-process-detail{
+        font-size: 16px;
+    }
+
+    .package{
+        margin: 10vh 2vh;
+    }
+    .source-item{
+        padding: 0 2vh;
+    }
+    .source-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        grid-gap: 10px;
+        margin-top: 10px;
+    }
+}
